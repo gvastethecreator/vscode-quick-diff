@@ -14,12 +14,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/gvastethecreator/quick-diff.git"
+    "url": "https://github.com/gvastethecreator/vscode-quick-diff.git"
   },
   "bugs": {
-    "url": "https://github.com/gvastethecreator/quick-diff/issues"
+    "url": "https://github.com/gvastethecreator/vscode-quick-diff/issues"
   },
-  "homepage": "https://github.com/gvastethecreator/quick-diff#readme",
+  "homepage": "https://github.com/gvastethecreator/vscode-quick-diff#readme",
   "keywords": [
     "diff",
     "compare",

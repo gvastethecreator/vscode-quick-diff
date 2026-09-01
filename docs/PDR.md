@@ -1,5 +1,5 @@
-Repo: `X:\vscode-extensions\quick-diff`
-Remote: private (`gvastethecreator/quick-diff`)
+Repo: `X:\vscode-extensions\vscode-quick-diff`
+Remote: private (`gvastethecreator/vscode-quick-diff`)
 
 # PDR — Quick Diff
 
