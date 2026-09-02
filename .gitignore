@@ -12,3 +12,5 @@ logs/
 .code-review-graph/
 .vscode/settings.json
 test-workspace/.vscode/
+.vscode-test/
+.vscode-test-web/
