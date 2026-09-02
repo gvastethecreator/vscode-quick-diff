@@ -163,5 +163,9 @@ function compareEvictionOrder(left: SnapshotEntry, right: SnapshotEntry): number
   return (left.unreferencedAt ?? left.snapshot.createdAt)
     - (right.unreferencedAt ?? right.snapshot.createdAt)
     || left.snapshot.createdAt - right.snapshot.createdAt
-    || left.snapshot.id.localeCompare(right.snapshot.id);
+    || compareSnapshotIds(left.snapshot.id, right.snapshot.id);
+}
+
+function compareSnapshotIds(left: string, right: string): number {
+  return left < right ? -1 : left > right ? 1 : 0;
 }
