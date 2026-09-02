@@ -1,14 +1,13 @@
 import * as vscode from "vscode";
-import { COMMANDS } from "./commands.ts";
+import { QuickDiffController } from "./editor.ts";
+
+let controller: QuickDiffController | undefined;
 
 export function activate(context: vscode.ExtensionContext): void {
-  for (const id of COMMANDS) {
-    context.subscriptions.push(
-      vscode.commands.registerCommand(id, () => {
-        void vscode.window.showErrorMessage("This command is not implemented yet.");
-      }),
-    );
-  }
+  controller = new QuickDiffController(context);
 }
 
-export function deactivate(): void {}
+export function deactivate(): void {
+  controller?.dispose();
+  controller = undefined;
+}
