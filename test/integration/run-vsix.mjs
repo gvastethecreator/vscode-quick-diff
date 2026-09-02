@@ -3,7 +3,8 @@ import { access, cp, mkdtemp, readdir, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { downloadAndUnzipVSCode, runTests } from "@vscode/test-electron";
+import { runTests } from "@vscode/test-electron";
+import { downloadVSCode } from "./download-vscode.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const requested = process.env.VSIX_PATH;
@@ -18,7 +19,7 @@ await cp(path.join(root, "test-workspace"), workspace, { recursive: true });
 const dataDirectory = path.join(temporaryRoot, "data");
 const extensionsDirectory = path.join(temporaryRoot, "ext");
 const version = process.env.VSCODE_TEST_VERSION || "stable";
-const vscodeExecutablePath = await downloadAndUnzipVSCode(version);
+const vscodeExecutablePath = await downloadVSCode(version);
 const cliScript = await findCliScript(vscodeExecutablePath);
 const cliEnvironment = { ...process.env, ELECTRON_RUN_AS_NODE: "1" };
 delete cliEnvironment.VSCODE_DEV;
