@@ -1,184 +1,159 @@
-Repo: `X:\vscode-extensions\vscode-quick-diff`
-Remote: private (`gvastethecreator/vscode-quick-diff`)
-
 # PDR — Quick Diff
 
+- Repo: `X:\vscode-extensions\vscode-quick-diff`
+- Remote: private (`gvastethecreator/vscode-quick-diff`)
+
 ## Status
-Scaffolded · Priority P1
+
+Release candidate · Priority P1 · QDF-001 through QDF-020 implemented · QDF-021 publication gated
 
 ## Product summary
 
-Quick Diff provides frictionless comparisons between selections, clipboard text, open files and saved content using VS Code's native diff editor. It should be a command-driven utility, not a custom diff renderer.
+Quick Diff makes common text comparisons immediate while keeping VS Code's native diff editor as the only rendering surface. It is a quiet command utility, not a custom diff product.
 
-## Opportunity
+## Release boundary
 
-The diff utility category is fragmented across file comparison, partial diff and clipboard comparison extensions. VS Code already has an excellent diff editor; the product value is reducing setup friction and making common compare sources composable.
+Version 0.1.0 includes:
 
-Category references:
-- https://marketplace.visualstudio.com/search?term=partial%20diff&target=VSCode&category=All%20categories&sortBy=Relevance
-- VS Code virtual documents: https://code.visualstudio.com/api/references/vscode-api#TextDocumentContentProvider
+- exact active selection versus clipboard text;
+- an immutable selection captured as Left versus a later selection;
+- the complete current in-memory buffer versus clipboard text;
+- two current open text-document buffers chosen through native Quick Picks;
+- Node and browser extension-host bundles.
 
-## Core jobs
+Comparing the current buffer with its saved version remains post-0.1.0.
 
-- compare current selection with clipboard;
-- capture one selection as Left and compare it with another selection;
-- compare two open files quickly;
-- compare current file with clipboard;
-- compare current unsaved buffer with on-disk version where available.
+## Commands
 
-## MVP commands
+| Command | Contract |
+| --- | --- |
+| `Quick Diff: Compare Selection with Clipboard` | Compare exact non-empty selections with current plain clipboard text. |
+| `Quick Diff: Use Selection as Left Side` | Capture an immutable in-memory left snapshot and show one brief status message. |
+| `Quick Diff: Compare Selection with Left Side` | Compare the current selection with the last captured left snapshot. |
+| `Quick Diff: Compare File with Clipboard` | Compare the complete active in-memory text buffer, including unsaved edits. |
+| `Quick Diff: Compare Open Files...` | Pick a left and right open text document, then compare current buffers. |
 
-- `Quick Diff: Compare Selection with Clipboard`
-- `Quick Diff: Use Selection as Left Side`
-- `Quick Diff: Compare Selection with Left Side`
-- `Quick Diff: Compare File with Clipboard`
-- `Quick Diff: Compare Open Files...`
+Only selection-versus-clipboard appears in the editor context menu. All five commands appear in the Command Palette. Version 0.1.0 has no default keybindings or settings.
 
-Post-MVP candidate:
-- `Quick Diff: Compare Current Buffer with Saved File`
+## Selection and clipboard semantics
+
+- Empty selections are rejected; the current line is never substituted.
+- Multiple selections are ordered by document position and joined with the document's EOL.
+- Overlaps are united without duplicate text; adjacent selections remain separate.
+- Captures use text at invocation time and never mutate with the source document.
+- Clipboard access uses `vscode.env.clipboard.readText()` only.
+- Empty clipboard text is rejected. Binary clipboard data is outside scope.
+- Clipboard behavior, including platform handling of embedded NUL characters, follows VS Code and the host OS.
 
 ## Architecture
 
-Use VS Code's built-in `vscode.diff` command. Ephemeral text sources should be represented through a custom URI scheme + `TextDocumentContentProvider` rather than temporary files wherever practical.
-
-Example conceptual flow:
+`src/core/` owns VS Code-independent models, selection normalization, UTF-8 limits, safe labels, virtual URI validation, and the bounded snapshot store. `QuickDiffController` owns native commands and lifecycle. `QuickDiffContentProvider` serves exact immutable text to `vscode.diff`.
 
 ```text
-selection A -> quickdiff:left/<id>  ┐
-                                    ├-> vscode.diff(leftUri, rightUri)
-clipboard   -> quickdiff:right/<id> ┘
+selection / clipboard / current buffer
+                 │
+                 ▼
+     bounded memory-only snapshot
+                 │
+                 ▼
+       quickdiff:/snapshot/<id>
+                 │
+                 ▼
+        VS Code native diff editor
 ```
 
-This keeps the extension small and uses the native editor for syntax highlighting, navigation and diff presentation.
+There is no temporary-file or custom-renderer fallback.
 
-## State model
+## State and limits
 
-A captured selection should store:
-
-- text;
-- source label;
-- language ID when useful for virtual-document highlighting;
-- timestamp/session ID only in memory.
-
-Default policy: state is window/session-local and not persisted across restarts.
-
-## Privacy
-
-Selections and clipboard text may contain secrets.
-
-- never persist them to disk by default;
-- never send them over network;
-- never emit contents to logs;
-- clear stale in-memory captures when replaced/deactivated;
-- no telemetry containing compared content or filenames.
-
-## UX
-
-Use native primitives only:
-
-- commands;
-- editor context menu for selection commands;
-- Quick Pick for choosing among open text documents;
-- native diff editor.
-
-Optional status feedback after `Use Selection as Left Side` may be a short non-modal status bar message/progress notification, not a persistent status item.
+- Snapshot identifiers are content-independent and collision-resistant.
+- URIs contain identifiers only, never source text, labels, paths, or content hashes.
+- At most 16 snapshots are retained.
+- Unreferenced snapshots expire after 30 minutes.
+- Referenced virtual documents are not evicted.
+- Deactivation clears all snapshots and timers.
+- Each source warns above 2 MiB and is rejected above 16 MiB.
+- Text is measured as UTF-8 and is never silently truncated.
 
 ## Labels
 
-Diff titles should clearly indicate source, for example:
+Diff titles use cleaned basenames. Duplicate filenames receive compact workspace-relative disambiguation. Absolute paths and control characters are rejected from labels.
+
+Examples:
 
 ```text
-Selection: src/foo.ts ↔ Clipboard
+Selection: editor.ts ↔ Clipboard
 Left Selection: README.md ↔ Selection: notes.md
+one/same.ts ↔ two/same.ts
 ```
 
-Avoid leaking full absolute paths in titles unless VS Code naturally provides them and it is useful.
+## Privacy and security
 
-## Edge cases
+Selections and clipboard text may contain secrets. Production code has:
 
-- empty selection: decide whether current line is used or command rejects; default should reject to avoid surprise;
-- huge clipboard contents;
-- binary/non-text clipboard unsupported;
-- untitled documents;
-- dirty documents;
-- documents with identical display names in different folders;
-- multi-root workspaces;
-- virtual/remote URIs;
-- selection ending with partial line;
-- mixed line endings.
+- no persistence;
+- no filesystem reads or writes;
+- no network access;
+- no telemetry;
+- no clipboard watcher;
+- no content or path logging;
+- no accepted command arguments.
 
-## Limits
+User-facing failures are concise and content-free. See `docs/security-review.md`.
 
-Set a generous warning threshold for extremely large ephemeral text to avoid freezing the extension host/diff UI. Warn and allow explicit continuation if needed; do not silently truncate.
+## UX
 
-## VS Code APIs
-
-- `env.clipboard.readText`
-- `workspace.registerTextDocumentContentProvider`
-- `commands.executeCommand('vscode.diff', ...)`
-- `window.visibleTextEditors` / `workspace.textDocuments`
-- Quick Pick
-- `Uri`
-- editor selections.
+Use native VS Code primitives only: Command Palette, one scoped editor context action, two-stage Quick Pick, a brief status-bar confirmation for left capture, and the native diff editor. No webviews, tree views, persistent status items, onboarding screens, or settings are allowed in 0.1.0.
 
 ## Compatibility
 
-| Environment | Goal |
+| Environment | Contract |
 | --- | --- |
-| Desktop | Full |
-| Web | Full |
-| Virtual Workspace | Full |
-| Restricted Mode | Full |
-| Remote | Full; clipboard behavior should follow VS Code's environment abstraction |
+| VS Code desktop 1.134+ | Full command and native diff support. |
+| Current desktop stable | Full support. |
+| VS Code web | Browser bundle and writable virtual-workspace support. |
+| Virtual workspace | Full support through VS Code APIs. |
+| Restricted Mode | Full support; no workspace execution or trust requirement. |
+| Remote extension host | Full support; clipboard semantics follow VS Code's environment abstraction. |
 
-Because it uses VS Code APIs and virtual text documents, this should be an excellent web-compatible portfolio project.
+`extensionKind: ["ui", "workspace"]` prefers the local UI host while retaining workspace-host compatibility.
 
-## Testing
+## Verification contract
 
-Unit:
-
-- source labels;
-- virtual URI generation;
-- state replacement;
-- size limits;
-- language ID propagation.
-
-Integration:
-
-- provider returns exact text;
-- `vscode.diff` invoked with expected URIs/title;
-- clipboard command;
-- dirty/untitled document handling;
-- multiple same-name documents;
-- web-host smoke test;
-- state never writes to filesystem.
+- focused unit tests cover selection, labels, limits, URI safety, snapshot lifecycle, and eviction;
+- desktop Extension Host tests cover lazy activation, immutable capture, clipboard, dirty buffers, rejected inputs, writable non-file documents, duplicate filenames, native diff tabs, and URI privacy;
+- web tests exercise the browser bundle in a writable virtual workspace;
+- performance checks bound selection preparation, UTF-8 sizing, snapshot operations, and bundle size;
+- media checks prove deterministic downsampling, dimensions, and native alpha;
+- VSIX inspection enforces the allowlist and rejects source, tests, scripts, dependencies, maps, and forbidden runtime surfaces;
+- a clean-profile installed-VSIX smoke test runs the real packaged extension.
 
 ## Acceptance criteria
 
-- no temp files for text-only diff flows;
-- one command compares selection to clipboard;
-- captured text is memory-only;
-- native diff editor is always used;
-- virtual documents display sensible language mode where possible;
-- works in vscode.dev/web host;
-- no idle workspace scanning or persistent state.
+- all five commands use the native diff editor;
+- current unsaved buffers and selections are captured exactly;
+- comparison text stays memory-only;
+- no source content appears in virtual URIs;
+- no temporary files or background scans exist;
+- snapshot and source-size bounds are enforced;
+- Node, browser, virtual, Restricted Mode, and remote contracts are declared;
+- README, icon, and preview describe and show real behavior;
+- the product and portfolio PDR copies remain byte-identical.
 
 ## Non-goals
 
-- custom diff algorithm/rendering;
-- binary/image diff;
-- Git client replacement;
-- patch application;
-- three-way merge UI;
-- persistent snippet/history manager.
+- custom diff algorithms or rendering;
+- binary or image diff;
+- Git client, patch, or three-way merge features;
+- persistent history, named slots, cloud sync, or clipboard watching;
+- automatic workspace scanning;
+- AI summaries;
+- public command arguments.
 
-## Post-MVP
+## Delivery status
 
-- compare with saved version;
-- compare two arbitrary selections using named slots;
-- normalized/ignore-whitespace helper command only if native diff options cannot cover the workflow;
-- API command arguments so other extensions can invoke Quick Diff programmatically.
+QDF-001 through QDF-020 define the implemented and locally verifiable release candidate. QDF-021 covers Marketplace/Open VSX publication, tag/release creation, and post-publication installation checks. It remains open until the user separately authorizes those remote mutations.
 
 ## Definition of done
 
-Native diff integration, virtual-document provider, privacy tests, web tests, docs, assets and release pipeline complete.
+Implementation is complete when final source and media bytes pass unit, type, dual-bundle, performance, desktop minimum/current, web, VSIX inspection, and clean-profile installed-VSIX checks. Publication is complete only after QDF-021 receives explicit authorization and both public listings are verified.

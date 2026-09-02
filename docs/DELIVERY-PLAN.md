@@ -1,10 +1,10 @@
 # Quick Diff — Complete delivery plan
 
-Status: execution specification  
+Status: release candidate implemented locally
 Repository: `gvastethecreator/vscode-quick-diff`  
-Product phase: scaffold  
+Product phase: verification and review
 Target release: `0.1.0`  
-Last reviewed: 2026-09-01
+Last executed: 2026-09-02
 
 This document converts `docs/PDR.md` into an implementation-ready plan. It is the source of truth for the work still required before Quick Diff can be released. Product intent remains in the PDR; this file owns execution order, technical contracts, verification, and launch gates.
 
@@ -12,28 +12,22 @@ This document converts `docs/PDR.md` into an implementation-ready plan. It is th
 
 ## 1. Current state
 
-The repository currently provides a consistent extension scaffold:
+The 0.1.0 release candidate now includes all five product commands, immutable memory-only snapshots, safe virtual documents, native diff launch, exact selection handling, open-document Quick Picks, bounded source sizes, Node and browser bundles, focused tests, package inspection, and replacement media.
 
-- TypeScript source and strict type checking;
-- esbuild bundle targeting the Node extension host;
-- VS Code command declarations;
-- CI for install, unit test, type check, and compilation;
-- Marketplace icon and preview placeholders;
-- PDR, development notes, publishing notes, and agent instructions.
+The implementation keeps the original minimal product boundary: no webviews, settings, default keybindings, telemetry, network access, persistence, temporary files, background scans, or custom diff renderer.
 
-The extension is not implemented yet:
+QDF-001 through QDF-020 are implemented. QDF-021 remains intentionally open because Marketplace/Open VSX publication, tags, releases, and public installation checks require separate user authorization.
 
-- every contributed command is registered by a shared placeholder handler;
-- every command reports `This command is not implemented yet.`;
-- the only unit test proves the Node test runner works;
-- no virtual document provider exists;
-- no captured-left state exists;
-- no native diff flow exists;
-- no VS Code Extension Host integration tests exist;
-- no browser bundle exists despite the PDR's web-compatibility goal;
-- no packaged VSIX has been installed and smoke-tested.
+### Execution ledger
 
-The current manifest also declares `"type": "module"` while esbuild emits a CommonJS `dist/extension.js`. The runtime format and manifest must be made unambiguous before feature work.
+| Tickets | State | Evidence surface |
+| --- | --- | --- |
+| QDF-001–007 | Implemented | Dual CJS entries, bounded store, safe URI codec, provider, native diff controller. |
+| QDF-008–015 | Implemented | Five commands, exact selection/clipboard/buffer behavior, Quick Pick, limits, one context action, no keybindings. |
+| QDF-016–018 | Implemented | Security review, browser bundle, virtual-workspace test, declared VS Code 1.134 minimum and capabilities. |
+| QDF-019 | Implemented | Product README, changelog, Imagegen PNG icon, real packaged-extension runtime preview. |
+| QDF-020 | Implemented | Multi-OS CI, desktop/web/VSIX runners, performance/media/archive checks, release-candidate artifact workflow. |
+| QDF-021 | Gated | No publication, tag, release, or registry mutation without explicit approval. |
 
 ---
 
