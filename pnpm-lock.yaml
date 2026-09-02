@@ -130,6 +130,9 @@ importers:
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
+      playwright:
+        specifier: 1.62.1
+        version: 1.62.1
       sharp:
         specifier: ^0.35.4
         version: 0.35.4(@types/node@26.4.0)
