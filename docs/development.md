@@ -14,7 +14,7 @@ Quick Diff uses pnpm and TypeScript. Do not switch package managers.
 | `pnpm run test:performance` | Check selection, size, store, and bundle budgets. |
 | `pnpm run test:integration` | Exercise the development extension in desktop VS Code. Build first. |
 | `pnpm run test:web` | Exercise the browser bundle in a writable virtual workspace. Build first. |
-| `pnpm run render:media -- --preview-source <png>` | Downsample the Imagegen master and frame a real runtime capture. |
+| `pnpm run render:media` | Downsample the accepted Imagegen raster icon. |
 | `pnpm run check:media` | Verify deterministic icon output, dimensions, and native alpha. |
 | `pnpm run quality` | Run unit, type, dual-bundle, performance, and media gates. |
 | `pnpm run vsix` | Build `quick-diff.vsix`. |

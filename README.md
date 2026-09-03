@@ -16,7 +16,7 @@
 
 Quick Diff is a small, command-driven bridge to the diff editor already built into VS Code. Comparisons use immutable virtual documents held in memory. There are no temporary files, custom diff views, settings, background scans, or default keybindings.
 
-<img src="media/preview.png" alt="Quick Diff comparing an unsaved TypeScript buffer with clipboard text in VS Code's native side-by-side diff editor" width="100%" />
+<img src="media/preview.png" alt="Quick Diff comparing an example TypeScript file with clipboard text" width="100%" />
 
 ## Use it
 

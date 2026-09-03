@@ -1,7 +1,7 @@
 # PDR — Quick Diff
 
-- Repo: `X:\vscode-extensions\vscode-quick-diff`
-- Remote: private (`gvastethecreator/vscode-quick-diff`)
+- Repo: `https://github.com/gvastethecreator/vscode-quick-diff`
+- Remote: public (`gvastethecreator/vscode-quick-diff`)
 
 ## Status
 

@@ -10,6 +10,6 @@
 
 ## Marketplace preview
 
-`media/preview.png` comes from Quick Diff 0.1.0 installed from a VSIX into a clean temporary VS Code 1.136 profile. The helper opened an unsaved TypeScript buffer, placed changed text on the VS Code clipboard, ran **Compare File with Clipboard**, and captured the native side-by-side diff editor.
+`media/preview.png` comes from Quick Diff 0.1.0 installed in stable VS Code 1.136.1 on 2026-09-03. The helper opened the synthetic `deploy-service/src/deploy.ts` file, placed changed text on the VS Code clipboard, ran **Compare File with Clipboard**, and captured the native side-by-side diff editor.
 
-The media pipeline only crops the VS Code development-host title bar, rounds the runtime frame, and places it on a transparent 1200 × 800 RGBA canvas. It does not generate or recreate the interface.
+The media pipeline tightly crops the native diff editor and adds a transparent RGBA edge with rounded corners. It does not generate or recreate the interface.
