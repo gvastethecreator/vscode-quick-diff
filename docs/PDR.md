@@ -142,7 +142,7 @@ Use native VS Code primitives only: Command Palette, one scoped editor context a
 
 ## Assets
 
-`media/source/quick-diff-imagegen-raw.png` retains the generated concept. `media/source/quick-diff-imagegen.png` is the accepted crisp vectorized-3D native-alpha raster normalized to a thin transparent safety margin. `media/icon.png` is a direct 256×256 downsample; no SVG reinterpretation is allowed. `media/preview.png` is the real installed-extension native diff capture.
+`media/source/quick-diff-imagegen-raw.png` retains the generated concept. `media/source/quick-diff-imagegen.png` is the accepted crisp vectorized semi-3D native-alpha raster with two balanced front-facing document halves, controlled gradient depth, one center compare arrow, and a thin transparent safety margin. `media/icon.png` is a direct 256×256 downsample; no SVG reinterpretation is allowed. `media/preview.png` is the real installed-extension native diff capture.
 
 ## Non-goals
 
