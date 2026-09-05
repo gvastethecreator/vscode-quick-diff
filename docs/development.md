@@ -31,4 +31,4 @@ The extension produces `dist/node/extension.cjs` and `dist/web/extension.cjs`. I
 
 Run `pnpm run compile`, then press F5 with **Run Extension**. The launch configuration opens `test-workspace/` in an Extension Development Host.
 
-See [compatibility.md](compatibility.md), [implementation-evidence.md](implementation-evidence.md), [media.md](media.md), [security-review.md](security-review.md), and [publishing.md](publishing.md) for release evidence and gates.
+See [compatibility.md](compatibility.md), [media.md](media.md), [security-review.md](security-review.md), and [publishing.md](publishing.md) for release evidence and gates.
