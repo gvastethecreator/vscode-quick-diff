@@ -110,8 +110,7 @@ async function run() {
 
   const visibleLeft = await openText("left whole buffer");
   const visibleRightDoc = await vscode.workspace.openTextDocument({ content: "right whole buffer", language: "plaintext" });
-  await vscode.window.showTextDocument(visibleRightDoc, { viewColumn: vscode.ViewColumn.Two, preview: false });
-  await vscode.window.showTextDocument(visibleLeft.document, { viewColumn: vscode.ViewColumn.One });
+  await vscode.window.showTextDocument(visibleRightDoc, { viewColumn: vscode.ViewColumn.Two, preview: false, preserveFocus: true });
   await waitForActiveDocument(visibleLeft.document, "The source fixture did not receive focus.");
   const sourceTabs = vscode.window.tabGroups.all.flatMap((group) => group.tabs);
   await vscode.commands.executeCommand("quickDiff.toggleTemporary");

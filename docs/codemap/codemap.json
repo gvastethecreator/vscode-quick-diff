@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T05:28:19Z",
-  "generated_from_commit": "4a5322f5af275904815079d80c7fa405501c4567",
+  "generated_at": "2026-10-26T05:54:22Z",
+  "generated_from_commit": "8de939ce9e75faaaca116754dc3ef747bba8ae53",
   "scope": [
     "."
   ],
@@ -250,8 +250,8 @@
         "path": "test/integration/suite/index.cjs",
         "origin": "tracked",
         "state": "present",
-        "digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
-        "size": 9911
+        "digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
+        "size": 9831
       },
       {
         "path": "test/runner/extension.cjs",
@@ -289,7 +289,7 @@
         "size": 375
       }
     ],
-    "digest": "e9d10582aef7174d122f60ef60ceb3d00fd4dbe46ab71c1393ebbae37c820a06"
+    "digest": "133ebbca320fddbf1a4ea5abe67970f091e1dbfe46e39d8d97abacec80462b95"
   },
   "coverage": {
     "discovered_files": 63,
@@ -2199,7 +2199,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -2213,7 +2213,7 @@
             "start_line": 19,
             "end_line": 19,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2228,7 +2228,7 @@
             "start_line": 25,
             "end_line": 25,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2243,7 +2243,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2258,7 +2258,7 @@
             "start_line": 29,
             "end_line": 29,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2273,7 +2273,7 @@
             "start_line": 30,
             "end_line": 30,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2288,7 +2288,7 @@
             "start_line": 46,
             "end_line": 46,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2303,7 +2303,7 @@
             "start_line": 51,
             "end_line": 51,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2318,7 +2318,7 @@
             "start_line": 52,
             "end_line": 52,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "deepEqual"
@@ -2333,7 +2333,7 @@
             "start_line": 53,
             "end_line": 53,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2348,7 +2348,7 @@
             "start_line": 54,
             "end_line": 54,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2363,7 +2363,7 @@
             "start_line": 61,
             "end_line": 61,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2378,7 +2378,7 @@
             "start_line": 63,
             "end_line": 63,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2393,7 +2393,7 @@
             "start_line": 69,
             "end_line": 69,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2408,7 +2408,7 @@
             "start_line": 70,
             "end_line": 70,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2423,7 +2423,7 @@
             "start_line": 71,
             "end_line": 71,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2438,7 +2438,7 @@
             "start_line": 72,
             "end_line": 72,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2453,7 +2453,7 @@
             "start_line": 84,
             "end_line": 84,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2468,7 +2468,7 @@
             "start_line": 85,
             "end_line": 85,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2483,7 +2483,7 @@
             "start_line": 86,
             "end_line": 86,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2498,7 +2498,7 @@
             "start_line": 95,
             "end_line": 95,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2513,7 +2513,7 @@
             "start_line": 96,
             "end_line": 96,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2528,7 +2528,7 @@
             "start_line": 103,
             "end_line": 103,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2543,7 +2543,7 @@
             "start_line": 106,
             "end_line": 106,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2555,10 +2555,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.left.getText(), \"left whole buffer\")",
-            "start_line": 119,
-            "end_line": 119,
+            "start_line": 118,
+            "end_line": 118,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2570,10 +2570,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.right.getText(), \"right whole buffer\")",
-            "start_line": 120,
-            "end_line": 120,
+            "start_line": 119,
+            "end_line": 119,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2585,10 +2585,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.left.getText(), \"right whole buffer\")",
-            "start_line": 123,
-            "end_line": 123,
+            "start_line": 122,
+            "end_line": 122,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2600,10 +2600,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.right.getText(), \"left whole buffer\")",
-            "start_line": 124,
-            "end_line": 124,
+            "start_line": 123,
+            "end_line": 123,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2615,10 +2615,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.ok(sourceTabs.every((tab) => remainingTabs.includes(tab)), \"Temporary close removed a source tab.\")",
-            "start_line": 127,
-            "end_line": 127,
+            "start_line": 126,
+            "end_line": 126,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2630,10 +2630,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.ok(!remainingTabs.includes(diff.tab), \"Temporary comparison was not closed.\")",
-            "start_line": 128,
-            "end_line": 128,
+            "start_line": 127,
+            "end_line": 127,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2645,10 +2645,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(vscode.window.tabGroups.activeTabGroup.activeTab.input instanceof vscode.TabInputTextDiff, false)",
-            "start_line": 133,
-            "end_line": 133,
+            "start_line": 132,
+            "end_line": 132,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2660,10 +2660,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(extension.isActive, true)",
-            "start_line": 156,
-            "end_line": 156,
+            "start_line": 155,
+            "end_line": 155,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2675,10 +2675,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.left.getText(), leftDocument.getText())",
-            "start_line": 179,
-            "end_line": 179,
+            "start_line": 178,
+            "end_line": 178,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2690,10 +2690,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.right.getText(), rightDocument.getText())",
-            "start_line": 180,
-            "end_line": 180,
+            "start_line": 179,
+            "end_line": 179,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -2705,10 +2705,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.ok(diff.tab.label.includes(\"one/same.ts\"), diff.tab.label)",
-            "start_line": 181,
-            "end_line": 181,
+            "start_line": 180,
+            "end_line": 180,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2720,10 +2720,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.ok(diff.tab.label.includes(\"two/same.ts\"), diff.tab.label)",
-            "start_line": 182,
-            "end_line": 182,
+            "start_line": 181,
+            "end_line": 181,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -2735,10 +2735,10 @@
           "location": {
             "path": "test/integration/suite/index.cjs",
             "symbol": "assert.equal(diff.tab.label.includes(folder.fsPath), false, \"Diff title leaked the absolute workspace path.\")",
-            "start_line": 183,
-            "end_line": 183,
+            "start_line": 182,
+            "end_line": 182,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "equal"
@@ -4490,7 +4490,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "import",
             "resolved_target": "external:javascript:vscode"
           }
@@ -7135,7 +7135,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "definition"
           },
           {
@@ -7144,7 +7144,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "definition"
           },
           {
@@ -7153,7 +7153,7 @@
             "start_line": 4,
             "end_line": 4,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "definition"
           }
         ]
@@ -10558,7 +10558,7 @@
             "start_line": 19,
             "end_line": 19,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -10569,7 +10569,7 @@
             "start_line": 25,
             "end_line": 25,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -10580,7 +10580,7 @@
             "start_line": 26,
             "end_line": 26,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "call",
             "resolved_target": "external:javascript:node:assert",
             "target_symbol": "ok"
@@ -10604,7 +10604,7 @@
             "start_line": 1,
             "end_line": 1,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "import",
             "resolved_target": "external:javascript:node:assert"
           }
@@ -10627,7 +10627,7 @@
             "start_line": 2,
             "end_line": 2,
             "extractor": "tree-sitter-javascript",
-            "source_digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+            "source_digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
             "kind": "import",
             "resolved_target": "external:javascript:vscode"
           }
@@ -11147,7 +11147,7 @@
     }
   ],
   "triggers": [],
-  "source_digest": "fc3913b63643126605edc1fe44afb1f02d1bf0afd4c3a77588f383d3273ab6f9",
+  "source_digest": "db5d88a2a58d2dd0f3ffb7cfda5c70090ff473d93b79bca3e8fedf5d28680f51",
   "changes": {
     "added_nodes": [],
     "removed_nodes": [],
@@ -11158,5 +11158,5 @@
     "changed": false,
     "changed_node_ids": []
   },
-  "generation_id": "9e8ea494b30b43162507074cba9460780abc831397aa64d84a48dc07364e7678"
+  "generation_id": "b847cae9b3f9e91f8a4991dc0f0cb1eef578d0f27d5ce479a713202d7046c9cd"
 }

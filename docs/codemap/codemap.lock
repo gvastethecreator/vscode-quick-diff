@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "source_commit": "4a5322f5af275904815079d80c7fa405501c4567",
+  "source_commit": "8de939ce9e75faaaca116754dc3ef747bba8ae53",
   "working_tree_dirty": true,
-  "generated_at": "2026-10-26T05:28:19Z",
-  "generation_id": "9e8ea494b30b43162507074cba9460780abc831397aa64d84a48dc07364e7678",
+  "generated_at": "2026-10-26T05:54:22Z",
+  "generation_id": "b847cae9b3f9e91f8a4991dc0f0cb1eef578d0f27d5ce479a713202d7046c9cd",
   "analysis": {
     "version": "syntax-1",
     "digest": "aac5588c813568478eb34b9cb090e19685ad183efe6d8b3496f261834a7c0f44"
@@ -249,8 +249,8 @@
         "path": "test/integration/suite/index.cjs",
         "origin": "tracked",
         "state": "present",
-        "digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
-        "size": 9911
+        "digest": "25d1862bfcfdd9d74de61b2d2f34c02413791ac2fce70e805c578a1df3d67439",
+        "size": 9831
       },
       {
         "path": "test/runner/extension.cjs",
@@ -288,12 +288,12 @@
         "size": 375
       }
     ],
-    "digest": "e9d10582aef7174d122f60ef60ceb3d00fd4dbe46ab71c1393ebbae37c820a06"
+    "digest": "133ebbca320fddbf1a4ea5abe67970f091e1dbfe46e39d8d97abacec80462b95"
   },
-  "source_digest": "fc3913b63643126605edc1fe44afb1f02d1bf0afd4c3a77588f383d3273ab6f9",
+  "source_digest": "db5d88a2a58d2dd0f3ffb7cfda5c70090ff473d93b79bca3e8fedf5d28680f51",
   "artifact_hashes": {
-    "codemap.json": "df010ff60f9a297de1d99171a7db9811fb57a2739d312ae998fd68023a21fa8c",
-    "codemap.md": "3af3328c24e1dfa086124648bb568266ed34969cc5d9572152eb66b151242959",
-    "codemap.html": "56d1bc4048fdaaa1de735baccdbb35a79d40556e64fa659e661a26df02a2248d"
+    "codemap.json": "22a1e923389210e78685cde9535f43f68ed165d4a5ae6f588befb100c4630a10",
+    "codemap.md": "24d067446f837eb30f19280061bcc687fce98a61699b34e95e75992141ee795a",
+    "codemap.html": "bf3bbd6dc982ed2c7a78675639c2dbadda6e0abc6564a30dac24a37873db2914"
   }
 }
