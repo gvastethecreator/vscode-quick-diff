@@ -1,7 +1,7 @@
 # Code map: vscode-quick-diff
 
-Generated: 2026-10-26T05:54:22Z | Commit: `8de939ce9e75` | Schema: 2
-Generation: `b847cae9b3f9e91f8a4991dc0f0cb1eef578d0f27d5ce479a713202d7046c9cd`
+Generated: 2026-10-26T07:24:29Z | Commit: `51db5f564e19` | Schema: 2
+Generation: `34bca1f19801d940ce773559822f3275ae8b3bc91e19427fc995f110bbc536ff`
 Scope: . | Inventory: working-tree
 Nodes: 52 | Edges: 130 | Flows: 0
 
@@ -9,7 +9,7 @@ Nodes: 52 | Edges: 130 | Flows: 0
 
 - Analysis: **partial**; 34 analyzed of 35 included files.
 - Configuration files: 1; omitted untracked files: 0.
-- Unresolved references and analysis limits: 191.
+- Unresolved references and analysis limits: 192.
 - Static references and call paths do not prove runtime execution or test coverage.
 
 ## Modules

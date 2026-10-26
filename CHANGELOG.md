@@ -1,7 +1,8 @@
 # Changelog
 
-## [Unreleased]
+## [0.1.1] - 2026-10-26
 
+- Refreshed README screenshots from the packaged extension running in stable VS Code.
 - Fixed: the editor context menu command no longer fails with an arguments error.
 - Fixed: Escape closes the temporary diff only when the diff editor has focus and no selection, widget, or snippet is active.
 - Fixed: closed diff tabs release their snapshots at once, so the snapshot limit no longer blocks new comparisons.
