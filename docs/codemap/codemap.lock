@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "source_commit": "b97994816109ea71794946ffb024c4b3f11d2a04",
+  "source_commit": "4a5322f5af275904815079d80c7fa405501c4567",
   "working_tree_dirty": true,
-  "generated_at": "2026-09-07T03:20:46Z",
-  "generation_id": "ca8b4229f393b57d8fb3f8d31b0ec927f9815cb8d33f971d48f32b63942f79dc",
+  "generated_at": "2026-10-26T05:28:19Z",
+  "generation_id": "9e8ea494b30b43162507074cba9460780abc831397aa64d84a48dc07364e7678",
   "analysis": {
     "version": "syntax-1",
-    "digest": "3c79d1c345c40f78e72d86e76fcdb0c240c137eb03778015ce78f994b43e3ccf"
+    "digest": "aac5588c813568478eb34b9cb090e19685ad183efe6d8b3496f261834a7c0f44"
   },
   "inventory": {
     "policy": {
@@ -53,8 +53,8 @@
         "path": "package.json",
         "origin": "tracked",
         "state": "present",
-        "digest": "91fbec884cac35c6c0fe7a1eb63c1698fa0046278f01a21f57489b69ccc19458",
-        "size": 5295
+        "digest": "cb03cdad98ab459f3117480676bd4048d8845922ff51b316f7bd50037f48d378",
+        "size": 5463
       },
       {
         "path": "scripts/build-web-tests.mjs",
@@ -74,8 +74,8 @@
         "path": "scripts/inspect-vsix.mjs",
         "origin": "tracked",
         "state": "present",
-        "digest": "7a9460136db1e622bff57ca280b0cd957dfeeb246ce614699dcd7a21e0927555",
-        "size": 8999
+        "digest": "5f11d0dcfd6de4f8ee0f7187f848ef1b66de665df206418c760afd3037e253b6",
+        "size": 9191
       },
       {
         "path": "scripts/performance.mjs",
@@ -86,7 +86,7 @@
       },
       {
         "path": "scripts/release-artifact.mjs",
-        "origin": "untracked",
+        "origin": "tracked",
         "state": "present",
         "digest": "22d3b41f2b8372e224466db0a33ae9686e4b99ee8fa3b45e713a20207e51ea69",
         "size": 5219
@@ -186,8 +186,8 @@
         "path": "src/editor.ts",
         "origin": "tracked",
         "state": "present",
-        "digest": "83d45cbd3ecca228f41e00f4a064507e5311430f6a4b249548f72a2fab369749",
-        "size": 21672
+        "digest": "bfb67ae25a571bb79e6b96f2ce5711bbcb23313593b0c6d398e196effb110ed0",
+        "size": 22828
       },
       {
         "path": "src/extension.ts",
@@ -249,8 +249,8 @@
         "path": "test/integration/suite/index.cjs",
         "origin": "tracked",
         "state": "present",
-        "digest": "772552292f1c81b5c740de372d40a2cd1c275d6c422894f4aadd2a307f86e275",
-        "size": 9556
+        "digest": "ff4e50b2f616562df0918d7da988afaff59339d1b267dd99308b3cee711ec2c7",
+        "size": 9911
       },
       {
         "path": "test/runner/extension.cjs",
@@ -288,12 +288,12 @@
         "size": 375
       }
     ],
-    "digest": "7d22019a8dddf02bb933610388f7034472165fbc816b5f737eec9d61eb67b1fd"
+    "digest": "e9d10582aef7174d122f60ef60ceb3d00fd4dbe46ab71c1393ebbae37c820a06"
   },
-  "source_digest": "bb143210d6a7e22abbb5e3330849fa1aa694f9a6667448a275c8d32619790e59",
+  "source_digest": "fc3913b63643126605edc1fe44afb1f02d1bf0afd4c3a77588f383d3273ab6f9",
   "artifact_hashes": {
-    "codemap.json": "186f163809f036f95dc9e32ec256e55bcea8af060e1473d94f081949da7cc0c7",
-    "codemap.md": "357ea3147aa66811ee41ec99280239c34ce56c2f4af7e465b604f95db7d83431",
-    "codemap.html": "e106e0721dd3e21057d2328b81f8f58ac69db2fd3d2527f1dabfba7293343a4c"
+    "codemap.json": "df010ff60f9a297de1d99171a7db9811fb57a2739d312ae998fd68023a21fa8c",
+    "codemap.md": "3af3328c24e1dfa086124648bb568266ed34969cc5d9572152eb66b151242959",
+    "codemap.html": "56d1bc4048fdaaa1de735baccdbb35a79d40556e64fa659e661a26df02a2248d"
   }
 }

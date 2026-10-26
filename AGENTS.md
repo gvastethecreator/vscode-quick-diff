@@ -24,7 +24,7 @@ F5 (`Run Extension`) compiles, then opens `test-workspace/`.
 - Domain logic lives in `src/core/` with no `vscode` import.
 - Product contract: `docs/PDR.md`. Update it in the same change as behavior.
 - Do not write tickets under `docs/`. Local tickets: `.scratch/vscode-quick-diff/issues/`.
-- Do not commit, push, or rewrite git history unless the user asks. Scaffold first commit is an exception.
+- Do not commit, push, or rewrite git history unless the user asks.
 
 ## Agent skills
 

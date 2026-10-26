@@ -40,6 +40,12 @@ function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
+async function waitForActiveDocument(document, message) {
+  const deadline = Date.now() + 5_000;
+  while (vscode.window.activeTextEditor?.document !== document && Date.now() < deadline) await delay(25);
+  assert.equal(vscode.window.activeTextEditor?.document, document, message);
+}
+
 async function run() {
   const extension = vscode.extensions.getExtension("gvastethecreator.quick-diff");
   assert.ok(extension, "Quick Diff was not discovered.");
@@ -106,6 +112,7 @@ async function run() {
   const visibleRightDoc = await vscode.workspace.openTextDocument({ content: "right whole buffer", language: "plaintext" });
   await vscode.window.showTextDocument(visibleRightDoc, { viewColumn: vscode.ViewColumn.Two, preview: false });
   await vscode.window.showTextDocument(visibleLeft.document, { viewColumn: vscode.ViewColumn.One });
+  await waitForActiveDocument(visibleLeft.document, "The source fixture did not receive focus.");
   const sourceTabs = vscode.window.tabGroups.all.flatMap((group) => group.tabs);
   await vscode.commands.executeCommand("quickDiff.toggleTemporary");
   diff = await activeDiff();
@@ -119,7 +126,7 @@ async function run() {
   const remainingTabs = vscode.window.tabGroups.all.flatMap((group) => group.tabs);
   assert.ok(sourceTabs.every((tab) => remainingTabs.includes(tab)), "Temporary close removed a source tab.");
   assert.ok(!remainingTabs.includes(diff.tab), "Temporary comparison was not closed.");
-  assert.equal(vscode.window.activeTextEditor.document, visibleLeft.document, "Temporary close did not restore source focus.");
+  await waitForActiveDocument(visibleLeft.document, "Temporary close did not restore source focus.");
   await vscode.commands.executeCommand("quickDiff.clearLeft");
   visibleLeft.selection = selection(visibleLeft.document, "left");
   await vscode.commands.executeCommand(commands.selectionLeft);
